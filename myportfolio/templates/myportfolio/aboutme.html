@@ -1,0 +1,37 @@
+{% load myportfolio_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <link href="{% static 'css/myportfolio.css' %}" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+</head>
+<body>
+    <div class="stars"></div>
+  <div class="twinkling"></div> 
+  <div class="topnav">
+    <a href="http://127.0.0.1:8000/">Home</a>
+    <a href="http://127.0.0.1:8000/myportfolio/about">About Me</a>
+    <a href="http://127.0.0.1:8000/myportfolio">My Projects</a>
+    <a href="https://www.linkedin.com/in/chrishickss/" target="_blank">LinkedIn Profile</a>
+    <a href="https://github.com/ChrissHickss" target="_blank">Github Profile</a>
+    <a href="https://public.tableau.com/app/profile/chrris.hicks" target="_blank">Tableau Public</a>
+  </div>
+    <div id="bio" >
+        <img id="rex" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/89149c109994719.60020c872811c.jpg" height="400" width="400">
+        <h1 class="myname">Who is Chris Hicks?</h1>
+        <p>I am currently serving in the United States Air Force as an Enterprise Logistics Manager for the KC-135. In other words, I oversee the entire Air Force's KC-135 fleet and ensure that they are getting the right plane parts at the right time in order to sustain the Air Force mission. Enough of the boring stuff though. 
+        </p>
+        <p> 
+        I completed a Full-Stack Software Engineering bootcamp called Code Platoon this past year and will also be finishing up my Bachelor's in Data Science from Arizona State University in Spring 2023. I have plans to pursue either a Master's in Business Analytics or in Computer Science in the near future.
+        </p>
+        <p> 
+        I am intrigued by data and how it can tell many different stories depending on who is looking at it. I am breaking into the datasphere from a non-technical background, which from my point of view gives me a unique advantage in that I have extensive domain knowledge in Supply Chain and Logistics that I can leverage to gain valuable insights.
+        </p>
+        <p> 
+        While data excites me in a professional sense, I also have a life in the wild. Three things I couldn't live without besides my family are Ice Hockey, lifting weights, and fishing. I also have the coolest dog I've ever met. He's a dalmatian. His brother is cool too I guess, he's not a dalmatian.
+        </p>
+    </div>
+</body>
+</html>
