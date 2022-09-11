@@ -20,7 +20,7 @@ class Post(models.Model):
                             unique_for_date='publish')
     author = models.ForeignKey(User,
                               on_delete=models.CASCADE,
-                              related_name='mymyportfolio_posts')
+                              related_name='myportfolio_posts')
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
@@ -40,7 +40,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('mymyportfolio:post_detail',
+        return reverse('myportfolio:post_detail',
                        args=[self.publish.year,
                              self.publish.month,
                              self.publish.day, self.slug])
