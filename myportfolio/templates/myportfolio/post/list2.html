@@ -1,0 +1,27 @@
+{% extends "myportfolio/myportfoliohome.html" %}
+{% load myportfolio_tags %}
+
+{% block title %}My portfolio{% endblock %}
+
+{% block content %}
+  <h1>My portfolio</h1>
+  {% if tag %}
+    <h2>repos tagged with "{{ tag.name }}"</h2>
+  {% endif %}
+  {% for repo in repos_data %}
+    <h2>
+      <a href="{{ repo.html_url }}">
+        {{ repo.name }}
+      </a>
+      <h3>
+        {{ repo.description }}
+      </h3>
+      <h5>
+        Topics: {{ repo.topics }}
+      </h5>
+    </h2>
+    <h2>----------------------------</h2>
+    
+  {% endfor %}
+  {% include "pagination.html" with page=repo %}
+{% endblock %}

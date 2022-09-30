@@ -9,6 +9,13 @@ from django.contrib.postgres.search import TrigramSimilarity
 from .models import Post, Comment
 from .forms import EmailPostForm, CommentForm, SearchForm
 from taggit.models import Tag
+import requests
+
+def githubRepos(request):
+    username = "ChrissHickss"
+    repos_url = f"https://api.github.com/users/{username}/repos"
+    repos_data = requests.get(repos_url).json()
+    return render(request, 'myportfolio/post/list2.html', {'repos_data': repos_data})
 
 def home(request):
     return render(request, 'myportfolio/base.html')
