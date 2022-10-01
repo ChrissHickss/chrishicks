@@ -5,11 +5,12 @@
 
 {% block content %}
   <h1>Featured Projects</h1>
-  <p>TBD</p>
-  <p>TBD</p>
-  <p>TBD</p>
-  <p>TBD</p>
-  <p>TBD</p>
+  <p>Full-Stack Software Engineering Project - Ahead of the Game</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yMD_2_THGlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+  <p>This was a group project from a 6 month long Full-Stack Software Engineering Bootcamp I completed called Code Platoon. The app is a sports events scheduling app that uses an API we built using DRF (Django REST Framework) as the back end and React.JS as the front end. My contributions were that I built the API and the live chat functionality. The video above is a demonstration of the app. Please see video below for a demonstration of the REST API. The repo for this is private but I can share the code with anyone interested.</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mrJbuK8k11A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>I built the API by collecting data from the MLB API, NHL API, and a Python package called Sportsipy and then combining all that data into a JSON format and loading it into our Postgres database that we made accessible with the Django REST Framework. It is currently available at (aotg-backend.herokuapp.com/event) but may go down soon due to Heroku changing the policy to start charging for any app using Postgres as the database. Feel free to reach out if you have any questions about the app.</p>
   <h2>----------------------------</h2>
   <h1>My Projects as Public Repositories</h1>
   {% for repo in repos_data %}
