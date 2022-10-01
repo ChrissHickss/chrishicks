@@ -4,10 +4,14 @@
 {% block title %}My portfolio{% endblock %}
 
 {% block content %}
-  <h1>My portfolio</h1>
-  {% if tag %}
-    <h2>repos tagged with "{{ tag.name }}"</h2>
-  {% endif %}
+  <h1>Featured Projects</h1>
+  <p>TBD</p>
+  <p>TBD</p>
+  <p>TBD</p>
+  <p>TBD</p>
+  <p>TBD</p>
+  <h2>----------------------------</h2>
+  <h1>My Projects as Public Repositories</h1>
   {% for repo in repos_data %}
     <h2>
       <a href="{{ repo.html_url }}" target="_blank">
@@ -23,5 +27,4 @@
     <h2>----------------------------</h2>
     
   {% endfor %}
-  {% include "pagination.html" with page=repo %}
 {% endblock %}

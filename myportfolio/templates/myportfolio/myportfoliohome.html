@@ -2,14 +2,15 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+<div>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
 <head>
   <title>My Projects</title>
   <link href="{% static '../static/css/myportfolio.css' %}" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
 </head>
 <body>
-  <div class="stars"></div>
-  <div class="twinkling"></div> 
   <div class="topnav">
     <a href="https://chrishicks.herokuapp.com/">Home</a>
     <a href="https://chrishicks.herokuapp.com/myportfolio/about">About Me</a>
@@ -23,16 +24,8 @@
     {% endblock %}
   </div>
   <div id="sidebar">
-    <h2>My portfolio</h2>
-    <h2>Tags (choose one):</h2>
-    {% get_tags as all_tags %}
-    <ul id="taglist">
-      {% for tag in all_tags %}
-        <li>
-          <a href="https://chrishicks.herokuapp.com/myportfolio/tag/{{ tag|lower }}">{{ tag }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    <h5>At the top of this page you can find my featured projects and down below you will see all of my public repositories on GitHub and a brief description of each one along with the technologies used for that project. Click on the title to bring you to the repository. This was made possible by utilizing the GitHub API.</h5>
   </div>
 </body>
+</div>
 </html>
